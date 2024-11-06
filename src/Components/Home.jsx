@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
     <Sidenav/>
-      <div className="h-full w-[80%] bg-zinc-800">  <Topnav/></div>
+      <div   className="h-full w-[80%] bg-zinc-800">  <Topnav/></div>
     
     </>
   );
