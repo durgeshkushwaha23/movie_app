@@ -5,6 +5,7 @@ import axios from "../utils/axios";
 import Header from "../partials/Header";
 import HorizontalCard from "../partials/HorizontalCard";
 import Dropdown from "../partials/drowpdown";
+import Loading from "./Loading";
 const Home = () => {
   document.title = "SCSDB | Homepage";
   const [wallpaper, setWallpaper] = useState(null); // Change to `null` for a single item
@@ -59,7 +60,7 @@ const Home = () => {
       </div>
     </>
   ) : (
-    <h1>Loading...</h1>
+    <Loading/>
   );
 };
 
