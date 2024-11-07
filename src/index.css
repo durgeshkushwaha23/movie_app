@@ -30,3 +30,56 @@ html,body{
  
   
 }
+/*/* Container styles */
+/* Container styles */
+.select {
+  position: relative;
+  width: 200px;
+  display: inline-block;
+}
+
+/* Select element styles */
+.select select {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Custom dropdown arrow */
+.select::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #16c2d5;
+  pointer-events: none;
+}
+
+/* Dropdown options */
+.select option {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.select option:hover {
+  background-color: #555;
+}
+
+/* Disabled option */
+.select option[disabled] {
+  color: #666;
+  cursor: not-allowed;
+}
