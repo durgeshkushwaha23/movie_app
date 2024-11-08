@@ -7,34 +7,33 @@ import Cards from "../partials/Cards";
 import Loading from "./Loading";
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-const Trending = () => {
-  document.title = "SCSDB | trending"
+const Popular = () => {
+    document.title = "SCSDB | Popular"
 
   const navigate = useNavigate();
-  const [category, setCategory] = useState('all');
-  const [duration, setDuration] = useState("day");
-  const [trending, setTrending] = useState([]);
+  const [category, setCategory] = useState('movie');
+  const [popularData, setPopularData] = useState([]);
   const [page, setPage] = useState(1);
 
-  const GetTrending = async () => {
+  const GetPopular = async () => {
     try {
-      const { data } = await axios.get(`trending/${category}/${duration}?page=${page}`);
-      setTrending((prevstate) => [...prevstate, ...data.results]);
+      const { data } = await axios.get(`${category}/popular?page=${page}`);
+      setPopularData((prevstate) => [...prevstate, ...data.results]);
       setPage(prevPage => prevPage + 1);
     } catch (error) {
       console.log("Error", error);
     }
   };
 
-  // Reset page and trending data when category or duration changes
+  // Reset page and Popular data when category changes
   useEffect(() => {
-    setTrending([]);
+    setPopularData([]);
     setPage(1);
-    GetTrending();
-  }, [category, duration]);
+    GetPopular();
+  }, [category]);
 
-  return trending.length > 0 ? (
-    <div className=" px-[11%] py-[3%] w-screen h-screen">
+  return popularData.length > 0 ? (
+    <div className="px-[11%] py-[3%] w-screen h-screen">
       <div className="w-full h-[10vh] py-[4%] flex items-center">
         <h1 className="text-2xl text-zinc-500 font-semibold ">
           <i
@@ -43,21 +42,20 @@ const Trending = () => {
             }}
             className="ri-arrow-left-line hover:text-purple-500 mr-3 mt-1"
           ></i>
-          Trending
+          Popular
         </h1>
         <Topnav />
-        <Dropdown title="category" options={["all", "tv", "movie"]} func={(e) => setCategory(e.target.value)} />
+        <Dropdown title="category" options={["tv", "movie"]} func={(e) => setCategory(e.target.value)} />
         <div className="w-[2%]"></div>
-        <Dropdown title="duration" options={["week", "day"]} func={(e) => setDuration(e.target.value)} />
       </div>
 
       <InfiniteScroll
-        dataLength={trending.length}
-        next={GetTrending}
+        dataLength={popularData.length}
+        next={GetPopular}
         hasMore={true}
-        loader={<h1>loading..</h1>}
+        loader={<h1>Loading...</h1>}
       >
-        <Cards data={trending} title={category} />
+        <Cards data={popularData} title={category} />
       </InfiniteScroll>
     </div>
   ) : (
@@ -65,4 +63,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default Popular;
