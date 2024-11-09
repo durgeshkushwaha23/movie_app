@@ -1,12 +1,13 @@
 import React from "react";
 import Dropdown from "./drowpdown";
+import { Link } from "react-router-dom";
 
 const HorizontalCard = ({ data }) => {
   return (
      
       <div className="w-full flex overflow-x-auto space-x-5">
         {data.map((d, i) => (
-          <div
+          <Link to={`/${d.media_type}/details/${d.id}`}
             key={i}
             className="min-w-[220px] rounded-lg shadow-lg p-3 transition-transform transform hover:scale-105"
           >
@@ -26,7 +27,7 @@ const HorizontalCard = ({ data }) => {
                 more
               </span>
             </p>
-          </div>
+          </Link>
         ))}
     </div>
   );

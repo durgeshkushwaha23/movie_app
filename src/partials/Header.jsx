@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = ({ data }) => {
-  console.log(data);
   return (
     <div
       style={{
@@ -24,7 +23,7 @@ const Header = ({ data }) => {
         {data?.overview
           ? `${data.overview.slice(0, 100)}...`
           : "No overview available"}
-        <Link className="text-blue-400">more</Link>
+        <Link to={`/${data.media_type}/details/${data.id}`} className="text-blue-400">more</Link>
       </p>
       <p className="text-white">
         <i className="ri-megaphone-fill text-yellow-700"></i>

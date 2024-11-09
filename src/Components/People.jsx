@@ -46,7 +46,6 @@ const People= () => {
                         onClick={() => navigate(-1)}
                         className="ri-arrow-left-line hover:text-purple-500 mr-3 mt-1"
                     ></i>
-                    movie: <p className="text-sm  text-zinc-600" >{category}</p>
                 </h1>
                 <Topnav />
                
@@ -58,7 +57,7 @@ const People= () => {
                 hasMore={hasMore}
                 loader={<h1>Loading...</h1>}
             >
-                <Cards data={person} title={category} />
+                <Cards data={person} title='person' />
             </InfiniteScroll>
         </div>
     ) : (
