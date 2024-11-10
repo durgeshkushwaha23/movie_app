@@ -14,7 +14,7 @@ export const asyncloadmovie = (id) => async (dispatch, getState) => {
 
     // Combine all data into one object
     let ultimatedata = {
-      detail: detail.data,
+      detail: detail.data, 
       externalid: externalid.data,
       recommendations: recommendations.data.results,
       similar: similar.data.results,

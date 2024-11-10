@@ -15,7 +15,7 @@ const Cards = ({ data,title }) => {
               c.poster_path || c.backdrop_path || c.profile_path
             }`}
             alt=""
-          />
+          /> 
           <h1 className="text-2xl text-zinc-300 font-semibold">
             {" "}
             {c?.name || c?.title || c?.original_name || c?.original_title}

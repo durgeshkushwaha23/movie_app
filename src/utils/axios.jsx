@@ -6,7 +6,7 @@ const instance = axios.create({
   params: {
     api_key: "43c3835c7153d2778c2bd7525b4abfe9",
   },
-  headers: {
+  headers: { 
     accept: "application/json",
   },
 });

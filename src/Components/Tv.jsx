@@ -7,7 +7,7 @@ import Cards from "../partials/Cards";
 import Loading from "./Loading";
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-const Tv = () => {
+const Tv = () => { 
     document.title = "SCSDB | Tv"
     const navigate = useNavigate();
     const [category, setCategory] = useState('airing_today');

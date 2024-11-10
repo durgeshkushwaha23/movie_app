@@ -11,7 +11,7 @@ const HorizontalCard = ({ data }) => {
             key={i}
             className="min-w-[220px] rounded-lg shadow-lg p-3 transition-transform transform hover:scale-105"
           >
-            <img
+            <img 
               className="w-full h-[120px] object-cover rounded-md mb-4"
               src={`https://image.tmdb.org/t/p/original/${
                 d.backdrop_path || d.profile_path || ""

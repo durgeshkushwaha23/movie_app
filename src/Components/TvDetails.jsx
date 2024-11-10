@@ -6,4 +6,4 @@ const Tvdetails = () => {
   )
 }
 
-export default Tvdetails
+export default Tvdetails;

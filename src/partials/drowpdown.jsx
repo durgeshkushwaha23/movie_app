@@ -6,7 +6,7 @@ const Dropdown = ({ title, options, func }) => {
       <select defaultValue="0" onChange={func} name="formate" id="formate">
         <option value="0" disabled>
           {title}
-        </option>
+        </option> 
         {options.map((o, i) => (
           <option key={i} value={o}>
             {o.toUpperCase()}

@@ -6,7 +6,7 @@ const About = () => {
       <div className="w-full h-screen mx-auto p-10 rounded-lg shadow-lg">
         <h1 className="text-5xl font-bold text-white text-center mb-10 tracking-widest">About Us</h1>
 
-        {/* Introduction Section */}
+        {/* Introduction Section done*/}
         <section className="mb-12">
           <h2 className="text-3xl font-semibold text-purple-500 mb-4 tracking-wide">Who We Are</h2>
           <p className="text-gray-400 leading-relaxed text-lg">

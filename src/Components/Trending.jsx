@@ -62,7 +62,7 @@ const Trending = () => {
     </div>
   ) : (
     <Loading />
-  );
+  ); 
 };
 
 export default Trending;

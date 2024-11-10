@@ -7,7 +7,7 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Form submission logic here

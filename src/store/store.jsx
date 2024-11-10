@@ -8,7 +8,7 @@ import personReducer from './reducers/PersonSlice';
 export const store = configureStore({
   reducer: {
     movie:movieReducer,
-    tv:tvReducer,
+    tv:tvReducer, 
     person:personReducer,
   },
 })

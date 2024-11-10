@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   info: null,
 }
-
+ 
 export const movieslice = createSlice({
     name: 'movie',
     initialState,

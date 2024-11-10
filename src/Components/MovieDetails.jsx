@@ -12,7 +12,7 @@ const MovieDetails = () => {
   const { info } = useSelector((state) => state.movie);
   const { id } = useParams();
   const dispatch = useDispatch();
-
+ 
   useEffect(() => {
     dispatch(asyncloadmovie(id));
     return () => {

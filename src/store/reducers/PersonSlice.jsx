@@ -6,7 +6,7 @@ const initialState = {
 
 export const PersonSlice = createSlice({
     name: 'person',
-    initialState,
+    initialState, 
     reducers: {
    loadperson:(state,action)=>{
     state.info = action.payload

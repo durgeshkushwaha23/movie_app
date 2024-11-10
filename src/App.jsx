@@ -5,7 +5,7 @@ import Trending from "./Components/Trending";
 import Popular from "./Components/Popular";
 import Movie from "./Components/Movie";
 import Tv from "./Components/Tv";
-import People from "./Components/People";
+import People from "./Components/People"; 
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Moviedetails from "./Components/moviedetails";

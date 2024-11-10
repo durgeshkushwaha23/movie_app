@@ -43,7 +43,7 @@ const Movie = () => {
     return movie.length > 0 ? (
         <div className="px-[11%] py-[3%] w-screen h-screen">
             <div className="w-full h-[10vh] py-[4%] flex items-center">
-                <h1 className="text-2xl text-zinc-500 font-semibold ">
+                 <h1 className="text-2xl text-zinc-500 font-semibold ">
                     <i
                         onClick={() => navigate(-1)}
                         className="ri-arrow-left-line hover:text-purple-500 mr-3 mt-1"

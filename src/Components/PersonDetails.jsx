@@ -6,4 +6,4 @@ const Persondetails = () => {
   )
 }
 
-export default Persondetails
+export default Persondetails 
