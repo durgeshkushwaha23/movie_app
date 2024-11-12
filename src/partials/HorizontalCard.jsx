@@ -10,7 +10,7 @@ const HorizontalCard = ({ data }) => {
           <Link to={`/${d.media_type}/details/${d.id}`}
             key={i}
             className="min-w-[220px] rounded-lg shadow-lg p-3 transition-transform transform hover:scale-105"
-          >
+          >  
             <img 
               className="w-full h-[120px] object-cover rounded-md mb-4"
               src={

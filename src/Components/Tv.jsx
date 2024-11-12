@@ -58,7 +58,7 @@ const Tv = () => {
             </div>
 
             <InfiniteScroll
-                dataLength={tv.length}
+                dataLength={tv.length}  
                 next={GetTv}
                 hasMore={hasMore}
                 loader={<h1>Loading...</h1>}

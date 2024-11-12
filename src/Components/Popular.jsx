@@ -53,7 +53,7 @@ const Popular = () => {
         dataLength={popularData.length}
         next={GetPopular}
         hasMore={true}
-        loader={<h1>Loading...</h1>}
+        loader={<h1>Loading...</h1>}   
       > 
         <Cards data={popularData} title={category} />
       </InfiniteScroll>

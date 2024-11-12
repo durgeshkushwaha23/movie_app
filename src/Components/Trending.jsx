@@ -61,7 +61,7 @@ const Trending = () => {
       </InfiniteScroll>
     </div>
   ) : (
-    <Loading />
+    <Loading />   
   ); 
 };
 

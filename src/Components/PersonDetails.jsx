@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import HorizontalCards from "../partials/HorizontalCard";
 import Loading from "./Loading";
 import Dropdown from "../partials/drowpdown";
-
+  
 const PersonDetails = () => {
     document.title = "SCSDB | Person Details";
 
