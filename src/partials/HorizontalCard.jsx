@@ -1,6 +1,7 @@
 import React from "react";
-import Dropdown from "./drowpdown";
 import { Link } from "react-router-dom";
+import noimage from "/noimage.jpeg";
+
 
 const HorizontalCard = ({ data }) => {
   return (
@@ -13,9 +14,11 @@ const HorizontalCard = ({ data }) => {
           >
             <img 
               className="w-full h-[120px] object-cover rounded-md mb-4"
-              src={`https://image.tmdb.org/t/p/original/${
-                d.backdrop_path || d.profile_path || ""
-              }`}
+              src={
+                d.backdrop_path || d.profile_path ?
+                `https://image.tmdb.org/t/p/original/${
+                d.backdrop_path || d.profile_path ||""
+              }`:noimage}
               alt=""
             />
             <h1 className="text-lg font-semibold text-gray-100 truncate">

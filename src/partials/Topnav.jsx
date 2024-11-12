@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import noimage from "/NoImage.png"
+// import noimage from "/NoImage.png"
 
 const Topnav = () => {
   const [query, setquery] = useState("");
@@ -52,7 +52,7 @@ const Topnav = () => {
                 s.backdrop_path || s.profile_path ? 
                 `https://image.tmdb.org/t/p/original/${
                 s.backdrop_path || s.profile_path
-              }`:noimage
+              }`:<h1>noimge</h1>
             }
               alt=""
             />

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import { asyncloadmovie, removemovie } from "../store/actions/movieAction";
 import { Link } from "react-router-dom";
 import Loading from "../Components/Loading";
@@ -11,7 +11,7 @@ const MovieDetails = () => {
   const navigate = useNavigate();
   const { info } = useSelector((state) => state.movie);
   const { id } = useParams();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();  
  
   useEffect(() => {
     dispatch(asyncloadmovie(id));
@@ -27,7 +27,7 @@ const MovieDetails = () => {
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
-      className="w-screen h-screen px-10 text-white overflow-y-auto"
+      className="w-screen h-screen px-10 relative text-white overflow-y-auto"
     >
       {/* Part 1: Navigation */}
       <nav className="flex items-center justify-between w-full h-16 text-2xl mt-3">
@@ -111,6 +111,7 @@ const MovieDetails = () => {
             Play Trailer
           </Link>
         </div>
+        
       </div>
 
       {/* Part 3: Watch Providers */}
@@ -170,6 +171,7 @@ const MovieDetails = () => {
           data={info.recommendations.length > 0 ? info.recommendations : info.similar}
         />
       </div>
+      <Outlet/>
     </div>
   ) : (
     <Loading />
