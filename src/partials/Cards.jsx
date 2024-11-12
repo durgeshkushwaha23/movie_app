@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import noimage from "/noimage.jpeg";
 const Cards = ({ data,title }) => {
   
   
@@ -15,7 +14,7 @@ const Cards = ({ data,title }) => {
               c.poster_path || c.backdrop_path || c.profile_path ?
               `https://image.tmdb.org/t/p/original/${
               c.poster_path || c.backdrop_path || c.profile_path
-            }`:noimage}
+            }`:<h1>noimage</h1>}
             alt=""
           /> 
           <h1 className="text-2xl text-zinc-300 font-semibold">

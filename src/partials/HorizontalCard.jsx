@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import noimage from "/noimage.jpeg";
 
 
 const HorizontalCard = ({ data }) => {
@@ -18,7 +17,7 @@ const HorizontalCard = ({ data }) => {
                 d.backdrop_path || d.profile_path ?
                 `https://image.tmdb.org/t/p/original/${
                 d.backdrop_path || d.profile_path ||""
-              }`:noimage}
+              }`:<h1>noimage</h1>}
               alt=""
             />
             <h1 className="text-lg font-semibold text-gray-100 truncate">
